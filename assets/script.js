@@ -12,7 +12,6 @@ function displayTime() {
 
 function colourCode () {
     let currentTime = moment().format("H");  
-    console.log("time: " + currentTime);
 
     for(let i = 0; i < timeEl.length; i++) {
         if(parseInt(timeEl[i].dataset['time']) < currentTime) {
@@ -39,7 +38,6 @@ function addItem(dataId) {
 function displayItems() {
     for(let i = 0; i < timeEl.length; i++) {
         let itemValue = localStorage.getItem("toDo"+(i+9));
-        console.log(itemValue);
         if(itemValue != undefined) {
             $(rowEl[i]).attr('value', itemValue);
         }
@@ -49,7 +47,6 @@ function displayItems() {
 $("button").click(function(event) {
     event.preventDefault();
     let dataId = parseInt($(this).attr("data-btn"));
-    console.log(dataId + typeof(dataId));
     addItem(dataId);
   });
 

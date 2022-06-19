@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Linking external and local style sheets-->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,16 +19,19 @@
   </head>
 
   <body>
+    <!--Header of page displaying title, description of page, and local day placeholder for javascript to place value into-->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" class="lead"></p> <!--moment.js usesv id to place local day into p tag-->
     </header>
+    <!--Container for time blocks to go inside for positioning purposes, commences main part of web page-->
     <main class="container">
-      <div class = "timeBlock">
-        <p class = description data-time="9"> 9am</p>
-        <input class = "row" data-time="9">
-        <button class = "saveBtn" id="btn" data-btn="9">💾</button>
+      <!--Each time block contains the hour allocated to that time block. an input box for users to type their plans into, and a save button to ensure plans are not lost-->
+      <div class = "timeBlock"> <!--Contains the main 3 elements of each calendar hour-->
+        <p class = description data-time="9"> 9am</p> <!--tells user what hour is allocated to time block and sets data-time for javascript functionality assistance-->
+        <input class = "row" data-time="9"> <!--Allows user to type in plans and sets data-time for javascript functionality assistance-->
+        <button class = "saveBtn" id="btn" data-btn="9">💾</button> <!--Allows user to save input and sets data-btn for javascript functionality assistance-->
       </div>
       <div class = "timeBlock">
         <p class = description data-time="10"> 10am</p>
@@ -71,6 +75,7 @@
       </div>
     </main>
 
+    <!--Links external and local javascript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/script.js"></script>
