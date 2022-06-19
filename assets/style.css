@@ -1,18 +1,10 @@
+/*sets font size, spacing, and styling of DOM*/
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-}
-
+/*Sets styling for page header*/
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -21,13 +13,14 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+/*Sets sizing and positoning of description in HTML which contains the time allocation for each hour on planner*/
 .description {
   white-space: pre-wrap;
   width: 10%;
   height: 20px;
   margin: 0;
 }
-
+/*Sets styling, sizing, positioning, and attributes for the container of each planner hour*/
 .timeBlock {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +31,7 @@ textarea {
   width: 100%;
   margin-bottom: 16px;
 }
-
+/*Sets sizing and styling for input section of each planner hour*/
 .row {
   white-space: pre-wrap;
   height: 80px;
@@ -47,24 +40,19 @@ textarea {
   margin: 0;
 }
 
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
+/*Sets background color to grey if the planner hour is in the past*/
 #past {
   background-color: #d3d3d3;
 }
-
+/*Sets background color to red if the planner hour is the same as local hour*/
 #present {
   background-color: #ff6961;
 }
-
+/*Sets background color to green if the planner hour is in the future*/
 #future {
   background-color: #77dd77;
 }
-
+/*Sets styling, size, and positioning of save button*/
 .saveBtn {
   height: 80px;
   width: 10%;
@@ -74,7 +62,7 @@ textarea {
   background-color: #06aed5;
   color: white;
 }
-
+/*changes styling of save button upon mouse hover*/
 .saveBtn:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
